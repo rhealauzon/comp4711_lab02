@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Post extends CI_Controller {
+class Post extends Application {
 
 	/**
 	 * Index Page for this controller.
@@ -21,6 +21,7 @@ class Post extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('post');
+                $this->data['pagebody'] = 'post';
+                $this->render();
 	}
 }
